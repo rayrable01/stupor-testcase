@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css'
 import 'react-leaflet-markercluster/styles'
 import './DeviceMap.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import devices from '../data/devices.json'
+import devicesData from '../data/devices.json'
 import { advancedIcon, basicIcon, specialIcon } from '../icons/icons'
 import type { IDevice } from '../types/types'
 import MarkerClusterGroup from 'react-leaflet-markercluster'
@@ -22,6 +22,8 @@ export const DeviceMap = () => {
         console.log(`Новое местоположение метки: ${lat}, ${lng}`);
     };
 
+    const devices: IDevice[] = devicesData as IDevice[]
+
     return (
         <MapContainer center={[55.751244, 37.618423]} zoom={13}>
         <TileLayer 
@@ -29,7 +31,7 @@ export const DeviceMap = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {devices && devices.map((device, index) => (
+        {devices && devices.map((device, index: number) => (
             <Marker
                 key={index}
                 position={[device.lat, device.lon]}

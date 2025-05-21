@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Device Alpha",
+        "lat": 55.751244,
+        "lon": 37.618423,
+        "model": "basic",
+        "status": "on"
+    },
+    {
+        "id": "2",
+        "name": "Device Beta",
+        "lat": 55.760000,
+        "lon": 37.620000,
+        "model": "advanced",
+        "status": "off",
+        "children": [
+            {
+                "id": "2-1",
+                "name": "Sensor A",
+                "lat": 55.7605,
+                "lon": 37.6205,
+                "model": "basic",
+                "status": "on"
+            },
+            {
+                "id": "2-2",
+                "name": "Sensor B",
+                "lat": 55.7610,
+                "lon": 37.6215,
+                "model": "special",
+                "status": "off"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Device Gamma",
+        "lat": 55.765000,
+        "lon": 37.610000,
+        "model": "special",
+        "status": "on"
+    }
+]

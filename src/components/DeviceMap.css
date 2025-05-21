@@ -1,0 +1,14 @@
+.leaflet-container {
+    height: 100vh;
+}
+
+.popup__list {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popup__list li {
+    font-weight: bold;
+}
